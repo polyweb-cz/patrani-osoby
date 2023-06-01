@@ -4,6 +4,10 @@ Pátrání po osobách - stažení databáze obsahující záznamy z aktivní p�
 ## Informace
 Policie ČR neposkytuje API pro svá data. Tento parser v bash tyto informace stahuje z webu policie a ukládá je do souboru people.csv
 
+## Použití
+```bash start.sh```
+Nastartuje stahování dat, po skončení je výsledek uložen v people.csv. Rychlost dokončení je závislá na rychlosti internetového připojení a počtu hledaných osob.
+
 ## Formát dat
 Soubor people.csv vypadá takto:
 pohlaví;id;datum narození;jméno;poznámka

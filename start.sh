@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Runs first script
-./bin/download.sh
+bash ./bin/download.sh
 
 #Check if first script is still running
 while pgrep -f "script1.sh" > /dev/null; do
@@ -9,7 +9,7 @@ while pgrep -f "script1.sh" > /dev/null; do
 done
 
 # Run second script
-./bin/cleanup.sh
+bash ./bin/cleanup.sh
 
 # Check if second script is still running
 while pgrep -f "script2.sh" > /dev/null; do
@@ -17,7 +17,7 @@ while pgrep -f "script2.sh" > /dev/null; do
 done
 
 # Run third script
-./bin/data.sh
+bash ./bin/data.sh
 
 # Check if third script is still running
 while pgrep -f "script3.sh" > /dev/null; do

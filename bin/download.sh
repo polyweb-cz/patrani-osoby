@@ -5,6 +5,9 @@ echo "-----------------Part1Start------------"
 #rm file source/xxx*.html without error if file not exist
 rm source/*.html 2>/dev/null
 
+#create folder source if not exist
+mkdir -p source
+
 function download() {
 
   #exit when $i is not "man" or "woman"
@@ -55,7 +58,7 @@ function download() {
   cislo=$(grep -o '<span id="ctl00_ctl00_Application_BasePlaceHolder_lblRecordCount" class="recordCount">Celkový počet osob: [0-9]\+' "$soubor" | sed 's/[^0-9]*//g')
 
   # Write number of mens
-  echo "Number of mens: $cislo"
+  echo "Number of people: $cislo"
 
   # Devide number of mens by 16
   vysledek=$(echo "scale=2; $cislo / 16" | bc)

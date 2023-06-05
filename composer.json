@@ -3,7 +3,7 @@
   "type": "library",
   "description": "Pátrání po osobách - stažení databáze obsahující záznamy z aktivní pátrací evidence Policie České republiky.",
   "homepage": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": [
     "MIT",
     "GPL-3.0"

@@ -24,5 +24,9 @@ while pgrep -f "script3.sh" > /dev/null; do
   sleep 1
 done
 
+if [ -n "$1" ]; then
+  cp people.csv "$1"
+  echo "File people.csv created in $1."
+fi
 # Write the result to the console
 echo "-----------------FINISHED-----------------"

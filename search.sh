@@ -1,15 +1,22 @@
 #!/bin/bash
+#!/bin/bash
 
 # Získání parametrů
 hledane_datum="$1"
 hledane_jmeno="$2"
 treti_parametr="$3"
+ctvrty_parametr="$4"
 
 # Sloučení druhého a třetího parametru s mezerou
 hledane_jmeno="$hledane_jmeno $treti_parametr"
 
-# Hledání řádků, které splňují obě kritéria
-vysledek=$(grep -F ";$hledane_datum;" people.csv | grep -F "$hledane_jmeno")
+file="people.csv"
+
+if [ -n "$ctvrty_parametr" ]; then
+  file=$ctvrty_parametr
+fi
+
+vysledek=$(grep -F ";$hledane_datum;" $file | grep -F "$hledane_jmeno")
 
 # Výpis výsledku do konzole
 if [ -n "$vysledek" ]; then
